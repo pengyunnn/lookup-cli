@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PYTHONPATH="/app"
 
-RUN pylint --errors-only $PYTHONPATH
+RUN find . -name "*.py" | xargs pylint --errors-only
 
 RUN python3 -m unittest discover -s tests
 
