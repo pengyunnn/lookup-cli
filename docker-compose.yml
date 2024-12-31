@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  lookup-cli:
+    image: lookup-cli
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - YAML_FILE_PATH=/app/data/people.yaml
+    tty: true
