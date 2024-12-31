@@ -54,12 +54,13 @@ lookup-cli-main/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone <repository_url>
    cd lookup-cli-main
    ```
-
 2. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -73,15 +74,18 @@ lookup-cli-main/
 💻 **Local Usage**:
 
 1. Set the `YAML_FILE_PATH` environment variable:
+
    ```bash
    export YAML_FILE_PATH=./data/people.yaml
    ```
-
 2. Run the CLI tool:
+
    ```bash
    python lookup_cli.py <name> [<output_field>]
    ```
+
    Example:
+
    ```bash
    python lookup_cli.py Alice age
    ```
@@ -91,11 +95,12 @@ lookup-cli-main/
 🐳 **Docker Usage**:
 
 1. Build the Docker image:
+
    ```bash
    docker build -t lookup-cli .
    ```
-
 2. Run the CLI tool:
+
    ```bash
    docker run -e YAML_FILE_PATH=/app/data/people.yaml -v $(pwd)/data:/app/data lookup-cli Alice age
    ```
@@ -103,11 +108,12 @@ lookup-cli-main/
 ### Running with Docker Compose
 
 1. Start the container:
+
    ```bash
    docker-compose up
    ```
-
 2. Use the CLI tool interactively:
+
    ```bash
    docker exec -it <container_name> python /usr/local/bin/lookup-cli Alice age
    ```
@@ -121,6 +127,7 @@ lookup-cli-main/
 🧪 **Run Tests**:
 
 Run the tests with:
+
 ```bash
 python -m unittest discover -s tests
 ```
@@ -128,6 +135,7 @@ python -m unittest discover -s tests
 ### Linting
 
 Run `pylint` to check the code quality:
+
 ```bash
 pylint lookup_cli.py
 ```
@@ -161,8 +169,3 @@ These workflows enforce high code quality and maintain reliable functionality.
 5. Open a pull request.
 
 ---
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
