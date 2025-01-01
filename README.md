@@ -115,7 +115,12 @@ lookup-cli-main/
 2. Use the CLI tool interactively:
 
    ```bash
-   docker exec -it <container_name> python /usr/local/bin/lookup-cli Alice age
+   $ docker exec -it <container_name> bash
+   ```
+
+   In container:
+   ```bash
+   $ lookup-cli Alice age
    ```
 
 ---
